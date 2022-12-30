@@ -212,7 +212,8 @@
                         "itemValue": "TBD",
                         "orderIndex": 3
                     },
-                    "typeofindicator": "{%if vars.item.Indicator_type == \"domain\"%}{{\"IndicatorType\" | picklist(\"Domain\", \"@id\")}}{%elif vars.item.Indicator_type == \"ip\"%}{{\"IndicatorType\" | picklist(\"IP Address\", \"@id\")}}{%elif vars.item.Indicator_type == \"sha256\"%}{{\"IndicatorType\" | picklist(\"FileHash-SHA256\", \"@id\")}}{%else%}None{%endif%}"
+                    "typeofindicator": "{%if vars.item.Indicator_type == \"domain\"%}{{\"IndicatorType\" | picklist(\"Domain\", \"@id\")}}{%elif vars.item.Indicator_type == \"ip\"%}{{\"IndicatorType\" | picklist(\"IP Address\", \"@id\")}}{%elif vars.item.Indicator_type == \"sha256\"%}{{\"IndicatorType\" | picklist(\"FileHash-SHA256\", \"@id\")}}{%else%}None{%endif%}",
+                    "hunts": "{{vars.input.records[0]['@id']}}"
                 },
                 "_showJson": false,
                 "operation": "Overwrite",
@@ -256,7 +257,8 @@
                     "respSlaStatus": "\/api\/3\/picklists\/72979f64-e8b9-4888-a965-957e0ec24818",
                     "priorityWeight": 1,
                     "escalatedtoincident": "\/api\/3\/picklists\/2128a09c-153d-4db3-985d-de6be33deae5",
-                    "alertRemainingAckSLA": 0
+                    "alertRemainingAckSLA": 0,
+                    "hunts": "{{vars.input.records[0]['@id']}}"
                 },
                 "_showJson": false,
                 "operation": "Overwrite",
