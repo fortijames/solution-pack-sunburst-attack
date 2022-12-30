@@ -2,7 +2,7 @@
     {
         "@type": "Scenario",
         "title": "Sunburst Attack IOC Hunt",
-        "description": "Sunburst Attack Hunt",
+        "description": "# Sunburst Attack Hunt\n\nIn this scenario we will create a hunt to look for known IOCs published by Sophos ( https://raw.githubusercontent.com/sophos-cybersecurity/solarwinds-threathunt/master/iocs.csv ). We will create an indicator for each items in the iocs.csv file, lookup the current reputation, and then search network resources for any findings of these objects. When IOCs are found an alert will be created to further investigate the findings. \n\n### 1) Prerequisites\n\n - FortiSOAR SOC Simulator\n - SLA Connector configured\n - VirusTotal Connector Configured\n\n ### 2) Simulation Steps:\n\n - Run Scenario `Sunburst Attack IOC Hunt`. You will be notified to update a Hunt Timeframe with a default of 30 days. \n - Open the created Hunt and execute the `Sunburst IOC hunt` to download the IOCs and create indicators. \n - Indicators are created, linked back to the Hunt, and are enriched with reputation information. \n - Alerts are created, linked back to the indicator and hunt, when IOCs "are found" on the network.  \n - Select all the Sunburst alerts and then hit `escalate` to create an incident to manage the alerts. \n - Browse records and show links from Hunt, to indicators, to Alerts, to an Incident. \n - Use the system to resolve the alerts incident.",
         "createdAlertsID": null,
         "steps": {
             "Steps": [
